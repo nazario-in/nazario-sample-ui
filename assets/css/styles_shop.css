@@ -1,0 +1,394 @@
+*, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+      background-color: #f9fafb; /* Tailwind's gray-50 */
+      color: #101419;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    button {
+      font-family: inherit;
+      font-size: inherit;
+    }
+    /* Visually hidden (for aria-label labels) */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    /* Root and layout */
+    .root {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-color: #f9fafb;
+    }
+    .layout-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e9edf1;
+      padding: 12px 40px;
+      white-space: nowrap;
+      background: #fff;
+      flex-wrap: nowrap;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #101419;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      fill: currentColor;
+    }
+    .logo-text {
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      user-select: none;
+      margin: 0;
+    }
+    .filter-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #101419;
+      cursor: pointer;
+      user-select: none;
+      align-self: center;
+      white-space: nowrap;
+    }
+
+    .header-right {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      gap: 32px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    /* Search container */
+    .search-container {
+      min-width: 160px;
+      max-width: 256px;
+      height: 40px;
+      display: flex;
+      border-radius: 24px;
+      overflow: hidden;
+      background-color: #e9edf1;
+      flex-shrink: 0;
+    }
+    .search-icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 16px;
+      padding-right: 12px;
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+      color: #5a738c;
+      flex-shrink: 0;
+    }
+    .search-input {
+      flex: 1 1 auto;
+      border: none;
+      padding-left: 16px;
+      padding-right: 16px;
+      height: 40px;
+      font-size: 1rem;
+      font-weight: 400;
+      background-color: #e9edf1;
+      color: #101419;
+      outline: none;
+      border-radius: 0 24px 24px 0;
+      user-select: text;
+      font-family: inherit;
+    }
+    .search-input::placeholder {
+      color: #5a738c;
+    }
+
+    /* Cart button */
+    .cart-button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-width: 0;
+      max-width: 480px;
+      background-color: #e9edf1;
+      border-radius: 9999px;
+      height: 40px;
+      padding: 0 10px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.015em;
+      color: #101419;
+      border: none;
+      user-select: none;
+      transition: background-color 0.2s;
+      flex-shrink: 0;
+    }
+    .cart-button:hover,
+    .cart-button:focus {
+      background-color: #d6dce3;
+      outline: none;
+    }
+    .cart-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* Main content */
+    .page-content {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      padding: 20px 160px;
+      background-color: #f9fafb;
+      overflow-y: auto;
+    }
+    .content-container {
+      max-width: 960px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .title-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px;
+    }
+    .page-title {
+      min-width: 288px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      color: #101419;
+      margin: 0;
+      user-select: none;
+    }
+
+    /* Products grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+      gap: 12px 12px;
+      padding: 16px;
+    }
+
+    /* Product card */
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-bottom: 30px;
+      cursor: default;
+      outline: none;
+    }
+    .product-card:focus {
+      box-shadow: 0 0 0 3px #40a5df;
+      border-radius: 16px;
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      object-fit: cover;
+      user-select: none;
+      display: block;
+      pointer-events: none;
+      background-color: #ddd;
+    }
+
+    .product-name {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0;
+      color: #101419;
+      user-select: none;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 1280px) {
+      .page-content {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        white-space: normal;
+      }
+      .header-left {
+        gap: 16px;
+      }
+      .header-right {
+        gap: 16px;
+        justify-content: center;
+        flex-grow: 0;
+        width: 100%;
+      }
+      .page-content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .page-title {
+        font-size: 1.5rem;
+        min-width: auto;
+        text-align: center;
+        width: 100%;
+      }
+      .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px 12px;
+      }
+      .search-container {
+        max-width: 100%;
+        min-width: auto;
+        flex-grow: 1;
+      }
+      .cart-button {
+        padding: 0 8px;
+        font-size: 0.8rem;
+        gap: 6px;
+      }
+    }
+    @media (max-width: 400px) {
+      .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+
+    .product-price {
+  color: #5a738c;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 2px 0 0 0;
+  line-height: 1.4;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.buy-now-btn {
+  margin-top: 6px;
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: #fff;
+  background: #5a738c;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.16s;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  user-select: none;
+  width: 100%;
+  max-width: 140px;
+  align-self: center;
+}
+
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  background: #3a5571;
+  outline: none;
+}
+
+/* Responsive adjustments for products */
+@media (max-width: 768px) {
+  .product-price {
+    font-size: 0.9rem;
+  }
+
+  .buy-now-btn {
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .product-price {
+    font-size: 0.85rem;
+  }
+
+  .buy-now-btn {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+  }
+}
+
+
+.product-info-text {
+  color: #5a738c;          /* Tailwind's text-[#5a738c] */
+  font-size: 0.875rem;     /* Tailwind's text-sm = 14px */
+  font-weight: 400;        /* font-normal */
+  line-height: 1.5;        /* leading-normal */
+  margin: 0;               /* reset margin to 0 for consistency */
+  user-select: none;       /* generally safe for price/button text */
+}
+
+.buy-now-btn {
+  background: none;
+  border: none;
+  padding: 0; 
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+}
+
+.buy-now-btn:hover,
+.buy-now-btn:focus {
+  text-decoration: underline;
+  outline: none;
+}
