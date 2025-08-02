@@ -1,0 +1,385 @@
+.breadcrumb-section {
+  background: var(--background-color);
+  padding: 2rem 0;
+  margin-top: 80px;
+  color: var(--default-color);
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: var(--nav-font);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--heading-color);
+}
+
+.breadcrumb-item.active {
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--accent-color);
+}
+
+/* Product Detail Section */
+.product-detail {
+  padding: 4rem 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Product Images */
+.product-image-section {
+  position: relative;
+}
+
+.main-product-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.main-product-image:hover {
+  transform: scale(1.02);
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border-color: #007bff;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Product Informatio */
+.product-info h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1.1rem;
+}
+
+.rating-text {
+  color: white;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card i {
+  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-card span {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Price Section  */
+.price-section {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.price-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+}
+
+.discount-badge {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.price-benefits {
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* CTA Buttons  */
+.cta-section {
+  margin-top: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+  min-width: 180px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+  min-width: 180px;
+}
+
+.btn-secondary:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Description and Specs */
+.content-section {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: white;
+  /* margin-bottom: 2rem; */
+  font-size: 2rem;
+  text-align: center;
+}
+
+.description-content,
+.specs-content {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  margin-bottom: 2rem;
+}
+
+.description-text {
+  line-height: 1.8;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+
+.description-text p {
+  margin-bottom: 1.5rem;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table td {
+  padding: 1rem 0;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: top;
+}
+
+.specs-table td:first-child {
+  font-weight: 600;
+  color: #fff;
+  width: 35%;
+  padding-right: 2rem;
+}
+
+.specs-table td:last-child {
+  color: #e0e0e0;
+}
+
+.specs-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-info h1 {
+    font-size: 2rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    min-width: 100%;
+  }
+
+  .main-product-image {
+    height: 300px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .feature-card {
+    padding: 1rem;
+  }
+
+  .feature-card i {
+    font-size: 1.5rem;
+  }
+
+  .price-display {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .description-content,
+  .specs-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .breadcrumb-section {
+    padding: 1rem 0;
+  }
+
+  .product-detail {
+    padding: 2rem 0;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-table td:first-child {
+    width: 40%;
+    padding-right: 1rem;
+  }
+}
