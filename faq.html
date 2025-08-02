@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ - Nazario Eyewear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-color: #0c7ff2;
+      --background-color: #f9f9f9;
+      --text-primary: #333333;
+      --text-secondary: #666666;
+      --accent-color: #e0f2f7;
+      --answer-background: #f0f9ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 5%;
+      border-bottom: 1px solid #e7edf4;
+      background: white;
+    }
+
+    header h2 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: var(--text-primary);
+    }
+
+    .button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    main {
+      padding: 40px 5%;
+    }
+
+    section {
+      background: white;
+      padding: 32px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 32px;
+    }
+
+    details {
+      background: #fff;
+      border-radius: 8px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+      margin-bottom: 16px;
+    }
+
+    summary {
+      font-size: 1.125rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    summary:hover {
+      background: var(--accent-color);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq_answer {
+      margin-top: 12px;
+      background-color: var(--answer-background);
+      padding: 16px;
+      border-radius: 8px;
+      color: var(--text-secondary);
+    }
+
+    .faq_answer b {
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: white;
+      padding: 24px 5%;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      margin: 0 10px;
+      font-size: 0.875rem;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text-primary);
+    }
+
+    footer p {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin-top: 12px;
+    }
+
+    svg.icon {
+      min-width: 16px;
+      min-height: 16px;
+    }
+
+    /* 📱 Responsive styles */
+    @media (max-width: 768px) {
+      nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 12px;
+      }
+
+      header {
+        text-align: center;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      section {
+        padding: 24px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      summary {
+        font-size: 1rem;
+      }
+
+      .button {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>
+    <svg class="icon" fill="var(--primary-color)" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10"/></svg>
+    Nazario Eyewear
+  </h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <button class="button">Shop Now</button>
+</header>
+
+<main>
+  <section>
+    <h1>Frequently Asked Questions</h1>
+
+    <details open>
+      <summary>
+        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
+        </svg>
+        What types of lenses do you offer?
+      </summary>
+      <div class="faq_answer">
+        We offer a wide range of lenses including <b>single-vision, progressive, and bifocal</b> options. You can also add coatings like <b>blue-light filtering, anti-reflective, and UV protection</b> to any lens type.
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
+        </svg>
+        How do I find the right frame style for my face?
+      </summary>
+      <div class="faq_answer">
+        Use our <b>Virtual Try-On</b> feature or visit our <a href="#" style="color: var(--primary-color); text-decoration: underline;">Frame Fit Guide</a> for tips.
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
+        </svg>
+        What is your return and exchange policy?
+      </summary>
+      <div class="faq_answer">
+        We offer a <b>30-day, no-questions-asked return policy</b> on all frames. Prescription lenses are final sale but can be remade if defective.
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
+        </svg>
+        Do you offer a warranty on your eyewear?
+      </summary>
+      <div class="faq_answer">
+        Yes, our frames come with a <b>one-year warranty</b> for manufacturing defects. Lenses with anti-scratch coating also have a scratch warranty.
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
+        </svg>
+        How long does it take to receive my glasses?
+      </summary>
+      <div class="faq_answer">
+        Non-prescription orders ship in <b>1-2 business days</b>, prescription ones in <b>5-7 business days</b>.
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Terms of Service</a>
+  <p>© 2024 Nazario Eyewear. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('details').forEach((el) => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('details').forEach((dt) => {
+        if (dt !== el) dt.removeAttribute('open');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
