@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nazario</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/shop.css" />
+</head>
+<body>
+  <div class="root" role="main">
+    <div class="layout-container">
+      <header>
+        <div class="header-left">
+          <div class="logo-group" aria-label="Nazario Logo">
+            <h2 class="logo-text">Nazario</h2>
+          </div> 
+          <a href="#" class="filter-link" aria-label="Filter">Filter</a>
+        </div>
+        <div class="header-right">
+          <label for="search" class="sr-only">Search</label>
+          <div class="search-container">
+            <div class="search-icon-container" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="search"
+              class="search-input"
+              placeholder="Search"
+              aria-label="Search products"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </div>
+          <button class="cart-button" aria-label="View cart" type="button">
+            <svg
+              class="cart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"
+              />
+            </svg>
+            Cart
+          </button>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <div class="content-container">
+          <!-- <div class="title-row">
+            <p class="page-title">Nazario</p>
+          </div> -->
+          <section class="products-grid" aria-label="Product list">
+            <!-- Repeat this product card for all products -->
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhBzWEBmp83B4RzzAoPco0iM-KSSCO9vnSj0n3r45FrGGLzFg892hIKJ5OE1lW5n1zNC-dpcgX0-CwhugWHEIgn6264SyjsStAOtf1rphoTUdv2PLI4LQ7y4ri6aW35ui9JUbnPprPWcQfGyotS6LP1Z5zO4T-UnGJtNWFTnQEbh6F-Zpip7j1eM4KrvPQUmOC8we54gSE1-sN-cqaWyetkL027yl8vECOtRjsSUjZt-Q3l0osmimVBoea6uID2rCMX874mEoUoi8"
+                alt="Classic Aviator Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Classic Aviator Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlF8FC7nvDuvuhmV5zKpBc4cjhgOtcczSQKcwTb5wUqdOnWboR_X7NzenBx19JCSgjcAG0XZsaDmGLuUuWjbyV0VSvxRK4MGsLWRNMN3GslK4M7zrYtBY1qwQj5iejuj280sq94dQ-nQx-hQkRem24X_i-m7X_X7vAxCKBdiXr9azqvqk4SDmtTY5ziWm2VKIakEdb9j5GjDDMmHICjwLN9Lf-sCOjxwWmsVMaCQDXwpVyLZ1tR-gbZW5UDduFsSsEbv2ontnV1uY"
+                alt="Retro Square Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Retro Square Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyR0EMHHMPCpu8SIVeLEyF6aF4e7iUen938T1BNwE9hb-A0LAFHPGXs81Ml9k1vw4xPfREq0-tUK6Sr_KiLRvUdw6gdBU_qKI1pdxaLNHBwQUdpD5XP5x1km8sgY3YdjYiAACSG1uyoxTUX8AhHIIZ6O3E-MrSoXn0l6ycheUXsBxj_z2Na_PfHylpuiaXDctlPiCYXgxoqknwtaM8paf8kCg8kL4JeB7L2ugAzmG6mEyFiAT-flzm667bqsxOfgizBn0au37NpII"
+                alt="Sporty Wrap-Around Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Sporty Wrap-Around Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxVKzZPhNYW6K_wNFiP-EEYnN0qkx4Et8h3aBksDThRbkCmIoLQHiJrzoOQg1JYFyAyelFgy2ScbLt6RLoVgMymhPjzfoRv87ZFfE_ZTjQ4TwDAfS7A7CjFW_IPcO72FWXDsaifv4MSB_z9YXerorm0OOpXsi44CLWZOM5vBQhwMrRXdl4RgyHKN7j4culoI0AxoadPwf78Q5tjQJ8vXarVyhHOeIryUgsuILoMdxbrJrfyO35dhkLVb1388-xqmoy3CGtA9b-KJ0"
+                alt="Elegant Cat-Eye Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Elegant Cat-Eye Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVmutmBxSbcyqU38HzHO8-BLykmb3vaCUbDjTN_JowqetHZm8yT1YYAVmsB72qgv_1EMOtJ2dPT6NnqPxd3nzqXz2WKYI7C2hmptX6ZrnVkIivlwKT9BqZo8wTSubkW2QqSiyVmFQkZnSJBFY-LxSJSY45Q9OViOe5JhojiRDPX5QrbwOfybFnlUGbC1VH6zj4_VsBMhpp8mt-DmITevTFnTvqaMqsLRm1IWRqz3rVGeCnSG4DWXcMfL8JCRlVfONc4wMkeJa1mGA"
+                alt="Modern Geometric Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Modern Geometric Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz9WHYLAEc4muKcttUKDu2DBlCrmtZHKCnT6B7YY8ew4llZC8Pooi7IWaQ-UPELlS1uISXxPH9PhSqbh8cw3JcpIeHEVvOpPzEI7Kq0KuUSLWOLKRv299wy-vIqmUC2OAY58XykPXM3C3HUYQwJBVh3VV7DG8bW3RFmQxfYjZ2JUtRDZ0S0KXprYH-OIuJz8zv0q2bbw0mt06wCyzfHKuf9s5ycnYYkhEYCMeWUJIGCXXzFLmdxIrJDC_YVytQ4Sy-YoTR9Vh1G20"
+                alt="Minimalist Round Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Minimalist Round Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh7_C_aGoqz7vWPyB1Bvx6clbmR-75-DEH6GTiWq9Uw1lLlUzYTn9s9XLBlhw1eO37Wjdz4arvRyAVGWZfZV5AddeH8ogBZvQOGef-9el3nPI7TZ6z_z2kg71m_pY7eA44MNjhkYeGMjDY-hg_qnoBb8mPfmOcFRuBsLP1w6zHjNUeagosDCLO_uzqedhMSH4MvAQeIVV9lwxPAPg9q1kYwVvd57QgrDWMVgsZhbDFWER1Lxg95q5RhQ5vx_rXN7YqmbifUPe86mA"
+                alt="Bold Oversized Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Bold Oversized Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuKtrr3cfhdqJOzqzBkTtWxo8TH_dhmvs7mjJivfRsZiv4eUNscQrWgqHvyIyyQ_bRWPSWjP9GYKxI-c110rcVZ1lssVkAIjq-5UqTo6D2NNlnw4MijLbx7QNL6qpBFZxNLxN4O43TaImIg-NJJ_fAy-5unGSGFkatGD_8f0NiXNzLd5H1XouQkAkJIcIkZA7HjkqFJR6JKN2F96gSMXPzOusGYYCvQsYcB_ky63fV8fWQriVhuwt9LO0_904SJSZT1MtvDL0X-Pk"
+                alt="Vintage Browline Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Vintage Browline Sunglasses</p>
+              <p class="product-price">$120</p>
+              <button class="buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRmg7URrHH9JSHtmSHCtkezVq-68WPrvGrlpT29Ic-mbw_r3J6XY5la6Z4XjZIimp0eRorjddcg1h4vo6dv33PZjhijf9jdeGajdR_SZjR7ZnAlSrnskJev8l9eZr_O2XilcPmHYJNP-bsqkTQqPFRyOIJsiYoCj6FlVscAW0Okssd0bpkiHCR541yv5FJMxpEeiWlAxjDwyjHlPct96XIkmq8-MdDgRIuQK_xnIRsPL8NQvAuK2uGdRHopQ0cLzUJUccle9-YUo0"
+                alt="Futuristic Shield Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Futuristic Shield Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSBY9XWw8XwaEOFNraAXJaV4t6smSVAlvugf4UB2rshjDcIU2Ysqh0rMGnUXBCDJII8oqGNIE0HjcPspsVPxW8wLjwUk4juPweorDxrXY7c0W_6PRBNwq4jTYyW9GD2mJq08o4H_ZkdtjITzca0LsKr5XA2BaHwreoKu2YgFce6ob3yLhHSe4M7CTB-HIfNFyOLWVLfQDk8fKSAfddumP5t4R8xNys3AsD6fGa-_GPLwtEojTBpYcohsUY8CrHIKf7KFdVS5GCJ1o"
+                alt="Eco-Friendly Bamboo Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Eco-Friendly Bamboo Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCt4hDdq8oqTo_8mhbkkHEdNV7b4BDc2pCk0Quhi5UTQkrJwqdmr0kZYQUI30XmjxtCU6T1UsBZR0-d8wJYSTMzccvY_TKFG8sNaemlAwvntLWtu3uP_22mFbHjFVDPoBKa7YZosAD-NmnMqx2pm8camXmFOC5mwTmUmXDVug_NWrUra8sOuLjR4aWwAm6eecu6OdE-7yoPZ16IXDHsIl2IdGiak3LKYs7un16Oa2GPsfnmD3Kg12ppclR7kanJk7tAHMqcMGr4Js"
+                alt="Luxury Gold-Rimmed Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Luxury Gold-Rimmed Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+
+            <article class="product-card" tabindex="0">
+              <img
+                class="product-image"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC36BpezB1KG0Re4lCPxJKE2CdUILsb8W-noP1JMGt-67VgwbiHxmDvZKphQ_nBam58dR65R75jhNaj962_-tOSUqph7RZp021GEJ8hLwG6VHD8ulvu5pHOL7oKPyCfJorQJlpF2O07IDdQPXZKx5rw0PiRoi3v_-_duby43j1hRA-Kz3c82yuC8IdqeBGK_5l_6UzXY84uoYbSiPjK2flHKn4tv5E6QORSa-5RJ-0OywIJa9KhUYB5K1mNEFuqU1kJcVCJPQzAD5w"
+                alt="Colorful Mirrored Sunglasses"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="product-name">Colorful Mirrored Sunglasses</p>
+              <p class="product-info-text">$120</p>
+              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+            </article>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
