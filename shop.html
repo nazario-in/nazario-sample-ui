@@ -65,13 +65,13 @@ body {
 /* PRODUCT GRID & CARD STYLING - As on the homepage info blocks */
 .content-container {
   width: 100%;
-  max-width: 1150px;
+  max-width: 1350px;
   padding: 0 28px;
 }
 
 .products-grid {
   margin-top: 80px;
-  background: var(--background-overlay);
+  background: #fff;
   border-radius: var(--border-radius);
   padding: 36px 24px 32px 24px;
   box-shadow: var(--shadow);
@@ -81,7 +81,9 @@ body {
 }
 
 .product-card {
-  background: var(--card-bg);
+  background: rgba(58, 34, 34, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
   border-radius: var(--border-radius);
   box-shadow: none;
   display: flex;
@@ -110,12 +112,12 @@ body {
   font-family: var(--heading-font);
   font-size: 1.17rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--accent-green);
   margin-bottom: 4px;
   letter-spacing: 0.03em;
 }
 .product-info-text {
-  color: var(--text-muted);
+  color: #4b6358;
   font-size: 1.08rem;
   margin-bottom: 10px;
   font-weight: 500;
