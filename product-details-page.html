@@ -3,15 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Blue Light Guardian - NAZARIO</title>
-    <meta
-      name="description"
-      content="Premium blue light blocking glasses with anti-glare technology"
-    />
-    <meta
-      name="keywords"
-      content="blue light glasses, eyewear, anti-glare, nazario"
-    />
+    <title>NAZARIO</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
@@ -40,25 +34,39 @@
     />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <!-- css File -->
+    <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-    <link href="assets/css/product-details.css" rel="stylesheet" />
+    <style>
+      .thumbnail {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+      .thumbnail:hover,
+      .thumbnail.active {
+        border-color: #007bff;
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    </style>
   </head>
 
-  <body class="index-page">
-    <!-- Header  -->
+  <body class="index-page scrolled">
     <header id="header" class="header fixed-top">
       <div class="branding d-flex align-items-cente">
         <div
           class="container position-relative d-flex align-items-center justify-content-between"
         >
           <a href="index.html" class="logo d-flex align-items-center">
+            <!-- <img src="assets/img/logo.webp" alt=""> -->
             <h1 class="sitename">NAZARIO</h1>
           </a>
 
           <nav id="navmenu" class="navmenu">
             <ul>
-              <li><a href="index.html">Home</a></li>
+              <li><a href="#hero" class="active">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
@@ -88,7 +96,8 @@
                   <li><a href="#">Dropdown 4</a></li>
                 </ul>
               </li>
-              <li><a href="#contact">Contact</a></li>
+
+              <li><a href="contact-page.html">Contact</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
@@ -96,270 +105,343 @@
       </div>
     </header>
 
-    <!-- image background to whole page -->
-    <div
-      class="page-background"
-      style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        overflow: hidden;
-      "
-    >
-      <img
-        src="https://images.pexels.com/photos/5996746/pexels-photo-5996746.jpeg"
-        alt="Eyewear Hero Image"
-        style="
-          width: 100vw;
-          height: 100vh;
-          object-fit: cover;
-          filter: brightness(0.6);
-        "
-      />
-      <div
-        class="overlay"
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(0, 0, 0, 0.45);
-        "
-      ></div>
-    </div>
     <main class="main">
-      <!-- Breadcrumb Section -->
-      <div class="breadcrumb-section dark-background">
-        <div class="container">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
+      <!-- Hero Section -->
+      <div
+        class="page-title dark-background"
+        style="
+          background-image: url(https://images.pexels.com/photos/5996746/pexels-photo-5996746.jpeg);
+        "
+      >
+        <div class="container position-relative">
+          <h1>Product Details</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li>
                 <a href="index.html"><i class="bi bi-house"></i> Home</a>
               </li>
-              <li class="breadcrumb-item">
-                <a href="#collection">Eyewear Collection</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a href="#blue-light">Blue Light Glasses</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Blue Light Guardian
-              </li>
+              <li><a href="shop.html">Shop</a></li>
+              <li>Blue Light Guardian</li>
             </ol>
           </nav>
         </div>
       </div>
-
-      <!-- Product Detail Section -->
-      <div class="product-detail">
-        <div class="container">
-          <div class="row align-items-start">
-            <!-- Product Images -->
-            <div class="col-lg-6">
-              <div class="product-image-section">
-                <img
-                  src="assets/img/product/1.jpeg"
-                  alt="Blue Light Guardian Glasses"
-                  class="main-product-image"
-                  id="mainImage"
-                />
-
-                <div class="product-thumbnails">
+      <section id="hero" class="light-background p-1">
+        <!-- <section id="hero" class="hero section dark-background">
+        <div class="hero-background">
+          <img
+            src="https://images.pexels.com/photos/5996746/pexels-photo-5996746.jpeg"
+            alt="Eyewear Hero Image"
+            data-aos-duration="1000"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="page-title dark-background">
+          <div class="container position-relative">
+            <h1>Product Details</h1>
+            <nav class="breadcrumbs">
+              <ol>
+                <li>
+                  <a href="index.html"><i class="bi bi-house"></i> Home</a>
+                </li>
+                <li><a href="shop.html">Shop</a></li>
+                <li>Blue Light Guardian</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section> -->
+        <section class="service-details section">
+          <div class="container">
+            <div class="row gy-5">
+              <div class="col-lg-6">
+                <div class="service-hero">
+                  <img
+                    src="assets/img/product/1.jpeg"
+                    alt="full view"
+                    class="img-fluid"
+                  />
+                </div>
+                <div
+                  class="product-thumbnails d-flex justify-content-center gap-3 mt-4"
+                >
                   <img
                     src="assets/img/product/2.jpeg"
                     alt="Front view"
-                    class="thumbnail active"
+                    class="thumbnail rounded-2 cursor-pointer opacity-75 active"
                   />
                   <img
                     src="assets/img/product/3.jpg"
                     alt="Side view"
-                    class="thumbnail"
+                    class="thumbnail rounded-2 cursor-pointer opacity-75"
                   />
                   <img
                     src="https://images.pexels.com/photos/1232459/pexels-photo-1232459.jpeg"
-                    alt="Angle view"
-                    class="thumbnail"
+                    alt=""
+                    class="thumbnail rounded-2 cursor-pointer opacity-75"
                   />
                   <img
                     src="assets/img/product/4.png"
-                    alt="Detail view"
-                    class="thumbnail"
+                    alt="Angle view"
+                    class="thumbnail rounded-2 cursor-pointer opacity-75"
                   />
                 </div>
               </div>
-            </div>
 
-            <!-- Product Information -->
-            <div class="col-lg-6">
-              <div class="product-info">
-                <h1>Blue Light Guardian</h1>
+              <div class="col-lg-6">
+                <div
+                  class="service-menu bg-white border border-1 border-secondary rounded-4 shadow-sm p-4 mb-4"
+                >
+                  <div class="service-sidebar">
+                    <h1 class="fw-bold mb-3">Blue Light Guardian</h1>
+                    <div
+                      class="product-rating d-flex align-items-center gap-2 mb-4"
+                    >
+                      <div class="stars text-warning fs-5">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </div>
+                      <span class="rating-text text-dark fs-6 ms-2"
+                        >4.8 (1,247 reviews)</span
+                      >
+                    </div>
 
-                <div class="product-rating">
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
-                  <span class="rating-text">4.8 (1,247 reviews)</span>
-                </div>
-
-                <!-- Features Grid  -->
-                <div class="features-grid">
-                  <div class="feature-card">
-                    <i class="bi bi-eyeglasses"></i>
-                    <span>Blue Light Protection</span>
-                  </div>
-                  <div class="feature-card">
-                    <i class="bi bi-sun"></i>
-                    <span>UV Resistant Lenses</span>
-                  </div>
-                  <div class="feature-card">
-                    <i class="bi bi-palette"></i>
-                    <span>Trendy Designs</span>
-                  </div>
-                  <div class="feature-card">
-                    <i class="bi bi-bag-check"></i>
-                    <span>Easy Returns</span>
-                  </div>
-                </div>
-
-                <!-- Price Section -->
-                <div class="price-section">
-                  <div class="price-display">
-                    <span class="original-price">₹4,999</span>
-                    <span class="price">₹2,999</span>
-                    <span class="discount-badge">40% OFF</span>
-                  </div>
-                  <div class="price-benefits">
-                    Free shipping across India • Easy 30-day returns
-                  </div>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="cta-section">
-                  <div class="cta-buttons">
-                    <a href="#" class="btn-primary">
-                      <i class="bi bi-cart-plus"></i>
-                      Add to Cart
-                    </a>
-                    <a href="#" class="btn-secondary">
-                      <i class="bi bi-heart"></i>
-                      Add to Wishlist
-                    </a>
+                    <div class="service-features mb-4">
+                      <div class="row gy-3">
+                        <div class="col-md-6">
+                          <div
+                            class="feature-item bg-light rounded-3 p-3 d-flex align-items-center gap-3"
+                          >
+                            <div class="feature-icon bg-white shadow-sm">
+                              <i class="bi bi-eyeglasses"></i>
+                            </div>
+                            <div class="feature-content">
+                              <h5 class="mb-0">Blue Light Protection</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div
+                            class="feature-item bg-light rounded-3 p-3 d-flex align-items-center gap-3"
+                          >
+                            <div class="feature-icon bg-white shadow-sm">
+                              <i class="bi bi-sun"></i>
+                            </div>
+                            <div class="feature-content">
+                              <h5 class="mb-0">UV Resistant Lenses</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div
+                            class="feature-item bg-light rounded-3 p-3 d-flex align-items-center gap-3"
+                          >
+                            <div class="feature-icon bg-white shadow-sm">
+                              <i class="bi bi-palette"></i>
+                            </div>
+                            <div class="feature-content">
+                              <h5 class="mb-0">Trendy Designs</h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div
+                            class="feature-item bg-light rounded-3 p-3 d-flex align-items-center gap-3"
+                          >
+                            <div class="feature-icon bg-white shadow-sm">
+                              <i class="bi bi-bag-check"></i>
+                            </div>
+                            <div class="feature-content">
+                              <h5 class="mb-0">Easy Returns</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Price Section -->
+                    <div class="pricing">
+                      <div class="pricing-item featured position-relative p-2">
+                        <div class="pricing-badge">Best Value</div>
+                        <div class="price mb-2">
+                          <span class="discout-price currency">₹</span>2,999
+                          <span
+                            class="fs-6 fw-normal text-decoration-line-through text-secondary ms-2"
+                            >₹4,999</span
+                          >
+                        </div>
+                        <div class="description mb-2">40% OFF</div>
+                        <div class="features-list mb-3">
+                          <div class="price-benefits text-muted small">
+                            Free shipping across India • Easy 30-day returns
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-pricing">Add to Cart</a>
+                        <a href="#" class="btn btn-pricing">Buy Now</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- Description and Specifications Section -->
-      <div class="content-section">
-        <div class="container">
-          <h2 class="section-title">Product Details</h2>
+        <section class="service-details section">
+          <div class="container">
+            <div class="row gy-5">
+              <h2 class="section-title p-1 m-1">Product Details</h2>
 
-          <div class="row">
-            <!-- Description -->
-            <div class="col-lg-6">
-              <div class="description-content">
-                <h3
-                  style="color: white; font-weight: 600; margin-bottom: 1.5rem"
+              <div class="col-lg-6">
+                <div
+                  class="service-menu bg-white border border-1 border-secondary rounded-4 shadow-sm p-4 mb-4"
                 >
-                  Description
-                </h3>
-                <div class="description-text">
-                  <p>
-                    The Blue Light Guardian represents the perfect fusion of
-                    style and technology. Designed for the modern digital
-                    lifestyle, these glasses feature advanced blue light
-                    filtering technology that blocks harmful blue light from
-                    screens while maintaining color clarity.
-                  </p>
+                  <div class="service-sidebar">
+                    <div class="service-features mb-4">
+                      <h1 class="fw-bold mb-3">Description</h1>
+                      <div class="text-muted fw-semibold py-3 lh-lg">
+                        <p>
+                          The Blue Light Guardian represents the perfect fusion
+                          of style and technology. Designed for the modern
+                          digital lifestyle, these glasses feature advanced blue
+                          light filtering technology that blocks harmful blue
+                          light from screens while maintaining color clarity.
+                        </p>
+                        <p>
+                          Crafted with premium lightweight titanium frames and
+                          fitted with high-quality anti-reflective lenses, these
+                          glasses provide all-day comfort whether you're working
+                          long hours at the computer, gaming, or simply browsing
+                          on your phone.
+                        </p>
+                        <p>
+                          The sleek, contemporary design makes them suitable for
+                          both professional and casual settings. Each pair comes
+                          with a premium case, cleaning cloth, and our
+                          comprehensive 2-year warranty.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                  <p>
-                    Crafted with premium lightweight titanium frames and fitted
-                    with high-quality anti-reflective lenses, these glasses
-                    provide all-day comfort whether you're working long hours at
-                    the computer, gaming, or simply browsing on your phone.
-                  </p>
-
-                  <p>
-                    The sleek, contemporary design makes them suitable for both
-                    professional and casual settings. Each pair comes with a
-                    premium case, cleaning cloth, and our comprehensive 2-year
-                    warranty.
-                  </p>
+              <div class="col-lg-6">
+                <div
+                  class="service-menu bg-white border border-1 border-secondary rounded-4 shadow-sm p-4 mb-4"
+                >
+                  <div class="service-sidebar">
+                    <div class="service-features mb-4">
+                      <h1 class="fw-bold mb-3">Specifications</h1>
+                      <table class="table text-start align-top">
+                        <tbody>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Frame Material
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success"
+                                >Premium Titanium Alloy</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Lens Type
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success"
+                                >Anti-Blue Light + Anti-Glare</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Blue Light Filtering
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success">140mm</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Frame Width
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success">140mm</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Lens Width
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success">52mm</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Bridge Width
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success">18mm</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Temple Length
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success">145mm</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Weight
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success"
+                                >22g (Ultra-lightweight)</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fw-semibold text-black w-25 pe-4 py-3">
+                              Color Options
+                            </td>
+                            <td class="text-muted py-3">
+                              <span class="text-success"
+                                >Black, Tortoise, Silver, Rose Gold</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              class="fw-semibold text-black w-25 pe-4 py-3 border-0"
+                            >
+                              Warranty
+                            </td>
+                            <td class="text-muted py-3 border-0">
+                              <span class="text-success"
+                                >2 Years Full Coverage</span
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Specifications -->
-            <div class="col-lg-6">
-              <div class="specs-content">
-                <h3
-                  style="color: white; font-weight: 600; margin-bottom: 1.5rem"
-                >
-                  Specifications
-                </h3>
-                <table class="specs-table">
-                  <tbody>
-                    <tr>
-                      <td>Frame Material</td>
-                      <td>Premium Titanium Alloy</td>
-                    </tr>
-                    <tr>
-                      <td>Lens Type</td>
-                      <td>Anti-Blue Light + Anti-Glare</td>
-                    </tr>
-                    <tr>
-                      <td>Blue Light Filtering</td>
-                      <td>Up to 90% (400-490nm range)</td>
-                    </tr>
-                    <tr>
-                      <td>Frame Width</td>
-                      <td>140mm</td>
-                    </tr>
-                    <tr>
-                      <td>Lens Width</td>
-                      <td>52mm</td>
-                    </tr>
-                    <tr>
-                      <td>Bridge Width</td>
-                      <td>18mm</td>
-                    </tr>
-                    <tr>
-                      <td>Temple Length</td>
-                      <td>145mm</td>
-                    </tr>
-                    <tr>
-                      <td>Weight</td>
-                      <td>22g (Ultra-lightweight)</td>
-                    </tr>
-                    <tr>
-                      <td>Color Options</td>
-                      <td>Black, Tortoise, Silver, Rose Gold</td>
-                    </tr>
-                    <tr>
-                      <td>Warranty</td>
-                      <td>2 Years Full Coverage</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
+      <!-- /Hero Section -->
     </main>
 
-    <!-- Footer  -->
     <footer id="footer" class="footer position-relative dark-background">
       <div class="container footer-top">
         <div class="row gy-4">
@@ -451,6 +533,7 @@
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
+    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
