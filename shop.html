@@ -3,71 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nazario</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="assets/css/shop.css" />
-</head>
-<body>
-  <div class="root" role="main">
-    <div class="layout-container">
-      <header>
-        <div class="header-left">
-          <div class="logo-group" aria-label="Nazario Logo">
-            <h2 class="logo-text">Nazario</h2>
-          </div> 
-          <a href="#" class="filter-link" aria-label="Filter">Filter</a>
-        </div>
-        <div class="header-right">
-          <label for="search" class="sr-only">Search</label>
-          <div class="search-container">
-            <div class="search-icon-container" aria-hidden="true">
-              <svg
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 256 256"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
-              </svg>
-            </div>
-            <input
-              type="search"
-              id="search"
-              class="search-input"
-              placeholder="Search"
-              aria-label="Search products"
-              autocomplete="off"
-              spellcheck="false"
-            />
-          </div>
-          <button class="cart-button" aria-label="View cart" type="button">
-            <svg
-              class="cart-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path
-                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"
-              />
-            </svg>
-            Cart
-          </button>
-        </div>
-      </header>
+  <title>Nazario Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
-      <main class="page-content">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Custom CSS -->
+  <!-- <link rel="stylesheet" href="assets/css/shop.css"> -->
+   <style>
+    /* Main content */
+/* Updated spacing for main.page-content with black and green grid */
+/* Fonts */
+:root {
+  /* Colors and brand palette, sampled from your screenshot */
+  --background-dark: #111916;
+  --background-overlay: rgba(21,33,29,0.77);
+  --accent-green: #18d985;
+  --pale-green: #7bfbb2;
+  --footer-dark: #161d1a;
+  --card-bg: rgba(32,43,39,0.97);
+
+  --text-main: #fff;
+  --text-muted: #c1e7d2;
+  --text-dark: #12a16b;
+
+  --border-radius: 16px;
+  --shadow: 0 4px 24px 0 rgba(0,0,0,0.14);
+
+  --heading-font: 'Barlow', sans-serif;
+  --body-font: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--background-dark);
+  color: var(--text-main);
+  font-family: var(--body-font);
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 0.04em;
+}
+
+/* SHOP PAGE MAIN CONTENT */
+.page-content {
+  margin: 0 auto;
+  padding: 48px 0 48px 0;
+  min-height: 80vh;
+  background: var(--background-overlay);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* PRODUCT GRID & CARD STYLING - As on the homepage info blocks */
+.content-container {
+  width: 100%;
+  max-width: 1350px;
+  padding: 0 28px;
+}
+
+.products-grid {
+  margin-top: 80px;
+  background: #fff;
+  border-radius: var(--border-radius);
+  padding: 36px 24px 32px 24px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 32px;
+}
+
+.product-card {
+  background: rgba(58, 34, 34, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.22s, transform 0.22s;
+  padding: 32px 22px 24px 22px;
+  border: 1.5px solid rgba(64,160,90,0.05);
+}
+
+.product-card:hover {
+  box-shadow:  0 4px 24px 0 rgba(22, 217, 133, 0.07);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.product-image {
+  width: 120px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #102e1a;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.07);
+}
+.product-name {
+  font-family: var(--heading-font);
+  font-size: 1.17rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 4px;
+  letter-spacing: 0.03em;
+}
+.product-info-text {
+  color: #4b6358;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.buy-now-btn {
+  font-family: var(--heading-font);
+  background: var(--accent-green);
+  color: #07180f;
+  font-size: 1.08rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 28px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.22s, color 0.22s;
+  box-shadow: 0 2px 14px 0 rgba(12,255,161,0.10);
+}
+.buy-now-btn:hover, .buy-now-btn:focus {
+  background: #1bee98;
+  color: #02582d;
+  outline: none;
+}
+
+/* Responsive tweaks to grid */
+@media (max-width: 900px) {
+  .products-grid {
+    padding: 22px 6px 20px 6px;
+    gap: 22px;
+  }
+  .product-card { padding: 24px 8px 18px 8px; }
+}
+@media (max-width: 600px) {
+  .content-container { padding: 0 4px; }
+  .products-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+}
+@media (max-width: 400px) {
+  .products-grid { grid-template-columns: 1fr; }
+}   </style>
+
+</head>
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+    <div class="branding d-flex align-items-center">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">NAZARIO</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </div>
+</header>
+
+
+  <main class="page-content">
         <div class="content-container">
-          <!-- <div class="title-row">
-            <p class="page-title">Nazario</p>
-          </div> -->
-          <section class="products-grid" aria-label="Product list">
+        <section class="products-grid" aria-label="Product list">
             <!-- Repeat this product card for all products -->
             <article class="product-card" tabindex="0">
               <img
@@ -228,7 +348,75 @@
           </section>
         </div>
       </main>
+
+
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Nazario</span>
+          </a>
+          <p>Redefining vision with tech. Nazario SSO makes sign-in seamless, secure, and seriously smart — because your users deserve better.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Eyewear Collection</h4>
+          <ul>
+            <li><a href="#">Blue Light Glasses</a></li>
+            <li><a href="#">Sunglasses</a></li>
+            <li><a href="#">Prescription Eyewear</a></li>
+            <li><a href="#">Reading Glasses</a></li>
+            <li><a href="#">Kids & Teens</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Get in Touch</h4>
+          <p>Baner, Pune</p>
+          <p>Maharashtra, IN 411045</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 74477 06777</span></p>
+          <p><strong>Email:</strong> <span>support@nazario.tech</span></p>
+        </div>
+      </div>
     </div>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2025</span> <strong class="px-1 sitename">Nazario</strong> <span>All rights reserved</span></p>
+      <div class="credits">
+        Built with ❤️ by the <a href="#">Inovite Team</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader">
+    <div></div><div></div><div></div><div></div>
   </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -1,299 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>FAQ - Nazario Eyewear</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Inter&family=Barlow&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
   <style>
-    :root {
-      --primary-color: #0c7ff2;
-      --background-color: #f9f9f9;
-      --text-primary: #333333;
-      --text-secondary: #666666;
-      --accent-color: #e0f2f7;
-      --answer-background: #f0f9ff;
-    }
 
-    * {
-      box-sizing: border-box;
-    }
+/* FAQ page matching Nazario (main.css) theme/style */
+:root {
+  --background-dark: #111916;
+  --background-overlay: rgba(21,33,29,0.77);
+  --accent-green: #18d985;
+  --pale-green: #7bfbb2;
+  --footer-dark: #161d1a;
+  --card-bg: rgba(32,43,39,0.97);
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-primary);
-      margin: 0;
-      padding: 0;
-    }
+  --text-main: #fff;
+  --text-muted: #c1e7d2;
+  --text-dark: #12a16b;
 
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 5%;
-      border-bottom: 1px solid #e7edf4;
-      background: white;
-    }
+  --border-radius: 16px;
+  --shadow: 0 4px 24px 0 rgba(0,0,0,0.14);
 
-    header h2 {
-      font-size: 1.25rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+  --heading-font: 'Barlow', sans-serif;
+  --body-font: 'Inter', sans-serif;
+}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 8px;
-    }
+/* General Section/Background */
+body {
+  background: var(--background-dark);
+  color: var(--default-color, #14201c);
+  font-family: var(--default-font, "Roboto", sans-serif);
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 0.04em;
+}
 
-    nav a {
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
 
-    nav a:hover {
-      color: var(--text-primary);
-    }
 
-    .button {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      margin-top: 8px;
-    }
+.section {
+  background: #fff;
 
-    .button:hover {
-      opacity: 0.9;
-    }
+  box-shadow: 0 6px 40px 0 rgba(16, 51, 43, 0.07);
+  padding-top: 40px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
 
-    main {
-      padding: 40px 5%;
-    }
+section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    section {
-      background: white;
-      padding: 32px;
-      border-radius: 10px;
-      max-width: 900px;
-      margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    }
+.section-title h2 {
+  font-family: var(--heading-font, "Barlow", sans-serif);
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: var(--accent-green);
+  margin-bottom: 36px;
+  letter-spacing: 0.02em;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 32px;
-    }
+details {
+  background: color-mix(in srgb, var(--accent-color, #12a16b), #fff 92%);
+  border-radius: 18px;
+  margin-bottom: 23px;
+  box-shadow: 0 2px 20px 0 rgba(18, 161, 107, 0.08);
+  padding: 0;
+  transition: box-shadow 0.24s;
+  border: 1.5px solid color-mix(in srgb, var(--accent-color, #12a16b), #fff 95%);
+  overflow: hidden;
+  font-family: var(--body-font, "Inter", sans-serif);
+}
 
-    details {
-      background: #fff;
-      border-radius: 8px;
-      padding: 12px 16px;
-      cursor: pointer;
-      transition: background 0.2s ease-in-out;
-      margin-bottom: 16px;
-    }
+details[open] {
+  box-shadow: 0 8px 32px 0 rgba(12,100,66,0.09);
+  border-color: var(--accent-color, #12a16b);
+}
 
-    summary {
-      font-size: 1.125rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+details summary {
+  font-family: var(--heading-font, "Barlow", sans-serif);
+  color: var(--heading-color, #0a3223);
+  font-weight: 700;
+  font-size: 1.18rem;
+  padding: 22px 32px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.17s, color 0.18s;
+  position: relative;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary:after {
+  content: "\f282";
+  font-family: "Bootstrap-icons";
+  float: right;
+  font-size: 1.4em;
+  color: var(--accent-color, #12a16b);
+  font-weight: normal;
+  transition: transform 0.28s;
+  transform: rotate(0deg);
+}
 
-    summary:hover {
-      background: var(--accent-color);
-    }
+details[open] summary:after {
+  transform: rotate(90deg);
+}
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
+.faq_answer {
+  color: color-mix(in srgb, var(--default-color, #14201c) 88%, #7ad28d 1%);
+  background: transparent;
+  padding: 0 32px 22px 32px;
+  font-size: 1.09rem;
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: var(--body-font, "Inter", sans-serif);
+}
 
-    .faq_answer {
-      margin-top: 12px;
-      background-color: var(--answer-background);
-      padding: 16px;
-      border-radius: 8px;
-      color: var(--text-secondary);
-    }
+details b {
+  color: var(--accent-color, #12a16b); 
+  font-weight: 600; 
+  letter-spacing: 0.02em;
+}
 
-    .faq_answer b {
-      font-weight: bold;
-    }
+details a {
+  color: var(--accent-color, #12a16b);
+  text-decoration: underline;
+}
 
-    footer {
-      background-color: white;
-      padding: 24px 5%;
-      text-align: center;
-    }
+/* Responsive: Stack/soften padding */
+@media (max-width: 768px) {
+  .section { padding: 40px 0 24px 0; }
+  details summary, .faq_answer { padding-left: 16px; padding-right: 16px; }
+  .section-title h2 { font-size: 1.42rem; margin-bottom: 26px; }
+}
 
-    footer a {
-      color: var(--text-secondary);
-      margin: 0 10px;
-      font-size: 0.875rem;
-      text-decoration: none;
-    }
+/* Match your footer/header colors if needed.
+You may comment out if satisfied with your main.css for these. */
+/*
+.footer { background: var(--background-color, #f4f9f7); }
+.header { background: rgba(0,0,0,0); }
+*/
 
-    footer a:hover {
-      color: var(--text-primary);
-    }
+/* Optionally: Add a slight hover effect for summaries */
+details:not([open]) summary:hover {
+  background: color-mix(in srgb, var(--accent-color, #12a16b), #fff 96%);
+  color: var(--accent-color, #12a16b);
+}
+</style>
 
-    footer p {
-      color: var(--text-secondary);
-      font-size: 0.875rem;
-      margin-top: 12px;
-    }
-
-    svg.icon {
-      min-width: 16px;
-      min-height: 16px;
-    }
-
-    /* 📱 Responsive styles */
-    @media (max-width: 768px) {
-      nav {
-        width: 100%;
-        justify-content: center;
-        margin-top: 12px;
-      }
-
-      header {
-        text-align: center;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      section {
-        padding: 24px 16px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      summary {
-        font-size: 1rem;
-      }
-
-      .button {
-        width: 100%;
-        max-width: 200px;
-      }
-    }
   </style>
 </head>
-<body>
 
-<header>
-  <h2>
-    <svg class="icon" fill="var(--primary-color)" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10"/></svg>
-    Nazario Eyewear
-  </h2>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-  <button class="button">Shop Now</button>
-</header>
+<body class="index-page">
 
-<main>
-  <section>
-    <h1>Frequently Asked Questions</h1>
-
-    <details open>
-      <summary>
-        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
-        </svg>
-        What types of lenses do you offer?
-      </summary>
-      <div class="faq_answer">
-        We offer a wide range of lenses including <b>single-vision, progressive, and bifocal</b> options. You can also add coatings like <b>blue-light filtering, anti-reflective, and UV protection</b> to any lens type.
+  <!-- Header (Copied from index.html) -->
+  <header id="header" class="header fixed-top">
+    <div class="branding d-flex align-items-center">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">NAZARIO</h1>
+        </a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
       </div>
-    </details>
+    </div>
+  </header>
 
-    <details>
-      <summary>
-        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
-        </svg>
-        How do I find the right frame style for my face?
-      </summary>
-      <div class="faq_answer">
-        Use our <b>Virtual Try-On</b> feature or visit our <a href="#" style="color: var(--primary-color); text-decoration: underline;">Frame Fit Guide</a> for tips.
+  <main class="main" style="padding-top: 100px;">
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <details open>
+          <summary>What types of lenses do you offer?</summary>
+          <div class="faq_answer">
+            We offer a wide range of lenses including <b>single-vision, progressive, and bifocal</b> options. You can also add coatings like <b>blue-light filtering, anti-reflective, and UV protection</b>.
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I find the right frame style for my face?</summary>
+          <div class="faq_answer">
+            Use our <b>Virtual Try-On</b> feature or visit our <a href="#" style="color: var(--accent-color); text-decoration: underline;">Frame Fit Guide</a>.
+          </div>
+        </details>
+
+        <details>
+          <summary>What is your return and exchange policy?</summary>
+          <div class="faq_answer">
+            We offer a <b>30-day, no-questions-asked return policy</b> on all frames. Prescription lenses are final sale but can be remade if defective.
+          </div>
+        </details>
+
+        <details>
+          <summary>Do you offer a warranty on your eyewear?</summary>
+          <div class="faq_answer">
+            Yes, our frames come with a <b>one-year warranty</b> for manufacturing defects.
+          </div>
+        </details>
+
+        <details>
+          <summary>How long does it take to receive my glasses?</summary>
+          <div class="faq_answer">
+            Non-prescription orders ship in <b>1-2 business days</b>, prescription ones in <b>5-7 business days</b>.
+          </div>
+        </details>
+
       </div>
-    </details>
+    </section>
+  </main>
 
-    <details>
-      <summary>
-        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
-        </svg>
-        What is your return and exchange policy?
-      </summary>
-      <div class="faq_answer">
-        We offer a <b>30-day, no-questions-asked return policy</b> on all frames. Prescription lenses are final sale but can be remade if defective.
+  <!-- Footer (Copied from index.html) -->
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Nazario</span>
+          </a>
+          <p>Redefining vision with tech. Nazario SSO makes sign-in seamless, secure, and smart — because your users deserve better.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Eyewear Collection</h4>
+          <ul>
+            <li><a href="#">Blue Light Glasses</a></li>
+            <li><a href="#">Sunglasses</a></li>
+            <li><a href="#">Prescription Eyewear</a></li>
+            <li><a href="#">Reading Glasses</a></li>
+            <li><a href="#">Kids & Teens</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Get in Touch</h4>
+          <p>Baner, Pune</p>
+          <p>Maharashtra, IN 411045</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 74477 06777</span></p>
+          <p><strong>Email:</strong> <span>support@nazario.tech</span></p>
+        </div>
       </div>
-    </details>
-
-    <details>
-      <summary>
-        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
-        </svg>
-        Do you offer a warranty on your eyewear?
-      </summary>
-      <div class="faq_answer">
-        Yes, our frames come with a <b>one-year warranty</b> for manufacturing defects. Lenses with anti-scratch coating also have a scratch warranty.
+    </div>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2025</span> <strong class="px-1 sitename">Nazario</strong> <span>All rights reserved</span></p>
+      <div class="credits">
+        Built with ❤️ by the <a href="#">Inovite Team</a>
       </div>
-    </details>
+    </div>
+  </footer>
 
-    <details>
-      <summary>
-        <svg class="icon" fill="currentColor" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.47 8.47a.75.75 0 0 1 1.06 0L8 10.94l2.47-2.47a.75.75 0 0 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 0 1 0-1.06z"/>
-        </svg>
-        How long does it take to receive my glasses?
-      </summary>
-      <div class="faq_answer">
-        Non-prescription orders ship in <b>1-2 business days</b>, prescription ones in <b>5-7 business days</b>.
-      </div>
-    </details>
-  </section>
-</main>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-<footer>
-  <a href="#">Privacy Policy</a>
-  <a href="#">Terms of Service</a>
-  <p>© 2024 Nazario Eyewear. All rights reserved.</p>
-</footer>
-
-<script>
-  document.querySelectorAll('details').forEach((el) => {
-    el.addEventListener('click', () => {
-      document.querySelectorAll('details').forEach((dt) => {
-        if (dt !== el) dt.removeAttribute('open');
-      });
-    });
-  });
-</script>
-
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
