@@ -1,0 +1,152 @@
+:root {
+  --background-dark: #111916;
+  --background-overlay: rgba(21,33,29,0.77);
+  --accent-green: #18d985;
+  --pale-green: #7bfbb2;
+  --footer-dark: #161d1a;
+  --card-bg: rgba(32,43,39,0.97);
+
+  --text-main: #fff;
+  --text-muted: #c1e7d2;
+  --text-dark: #12a16b;
+
+  --border-radius: 16px;
+  --shadow: 0 4px 24px 0 rgba(0,0,0,0.14);
+
+  --heading-font: 'Barlow', sans-serif;
+  --body-font: 'Inter', sans-serif;
+}
+
+/* General Section/Background */
+body {
+  background: var(--background-dark);
+  color: var(--default-color, #14201c);
+  font-family: var(--default-font, "Roboto", sans-serif);
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 0.04em;
+}
+
+.main {
+width: 95%;
+margin-left: auto;
+margin-right: auto;
+}
+.section {
+background: #fff;
+border-radius: 16px;
+box-shadow: 0 6px 40px 0 rgba(16, 51, 43, 0.07);
+margin: 24px auto 60px;
+padding: clamp(16px, 3vw, 32px);
+}
+
+.section > .container {
+max-width: none; 
+width: 100%;
+padding-left: clamp(16px, 4vw, 32px); 
+padding-right: clamp(16px, 4vw, 32px);
+}
+main.main {
+padding-top: 100px; /* same as current inline, move to CSS if preferred */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-family: var(--heading-font, "Barlow", sans-serif);
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: var(--accent-green);
+  margin-bottom: 36px;
+  letter-spacing: 0.02em;
+}
+
+details {
+  background: color-mix(in srgb, var(--accent-color, #12a16b), #fff 92%);
+  border-radius: 16px;
+  margin-bottom: 23px;
+  box-shadow: 0 2px 20px 0 rgba(30, 31, 31, 0.08);
+  padding: 0;
+  transition: box-shadow 0.24s;
+  border: 1.5px solid color-mix(in srgb, var(--accent-color, #12a16b), #fff 95%);
+  overflow: hidden;
+  font-family: var(--body-font, "Inter", sans-serif);
+}
+
+details[open] {
+  box-shadow: 0 8px 32px 0 rgba(12,100,66,0.09);
+  border-color: var(--accent-color, #12a16b);
+}
+
+details summary {
+  font-family: var(--heading-font, "Barlow", sans-serif);
+  color: var(--heading-color, #0a3223);
+  font-weight: 700;
+  font-size: 1.18rem;
+  padding: 22px 32px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.17s, color 0.18s;
+  position: relative;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary:after {
+  content: "\f282";
+  font-family: "Bootstrap-icons";
+  float: right;
+  font-size: 1.4em;
+  color: var(--accent-color, #12a16b);
+  font-weight: normal;
+  transition: transform 0.28s;
+  transform: rotate(0deg);
+}
+
+details[open] summary:after {
+  transform: rotate(90deg);
+}
+
+.faq_answer {
+  color: color-mix(in srgb, var(--default-color, #14201c) 88%, #7ad28d 1%);
+  background: transparent;
+  padding: 0 32px 22px 32px;
+  font-size: 1.09rem;
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: var(--body-font, "Inter", sans-serif);
+}
+
+details b {
+  color: var(--accent-color, #12a16b); 
+  font-weight: 600; 
+  letter-spacing: 0.02em;
+}
+
+details a {
+  color: var(--accent-color, #12a16b);
+  text-decoration: underline;
+}
+
+/* Responsive: Stack/soften padding */
+@media (max-width: 768px) {
+  .section { padding: 40px 0 24px 0; }
+  details summary, .faq_answer { padding-left: 16px; padding-right: 16px; }
+  .section-title h2 { font-size: 1.42rem; margin-bottom: 26px; }
+}
+
+/* Match your footer/header colors if needed.
+You may comment out if satisfied with your main.css for these. */
+/*
+.footer { background: var(--background-color, #f4f9f7); }
+.header { background: rgba(0,0,0,0); }
+*/
+
+/* Optionally: Add a slight hover effect for summaries */
+details:not([open]) summary:hover {
+  background: color-mix(in srgb, var(--accent-color, #12a16b), #fff 96%);
+  color: var(--accent-color, #12a16b);
+}

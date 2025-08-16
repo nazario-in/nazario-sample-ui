@@ -19,170 +19,31 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
-  <style>
-
-/* FAQ page matching Nazario (main.css) theme/style */
-:root {
-  --background-dark: #111916;
-  --background-overlay: rgba(21,33,29,0.77);
-  --accent-green: #18d985;
-  --pale-green: #7bfbb2;
-  --footer-dark: #161d1a;
-  --card-bg: rgba(32,43,39,0.97);
-
-  --text-main: #fff;
-  --text-muted: #c1e7d2;
-  --text-dark: #12a16b;
-
-  --border-radius: 16px;
-  --shadow: 0 4px 24px 0 rgba(0,0,0,0.14);
-
-  --heading-font: 'Barlow', sans-serif;
-  --body-font: 'Inter', sans-serif;
-}
-
-/* General Section/Background */
-body {
-  background: var(--background-dark);
-  color: var(--default-color, #14201c);
-  font-family: var(--default-font, "Roboto", sans-serif);
-  margin: 0;
-  min-height: 100vh;
-  letter-spacing: 0.04em;
-}
-
-
-
-.section {
-  background: #fff;
-
-  box-shadow: 0 6px 40px 0 rgba(16, 51, 43, 0.07);
-  padding-top: 40px;
-  padding-bottom: 60px;
-  margin-bottom: 60px;
-}
-
-section-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-title h2 {
-  font-family: var(--heading-font, "Barlow", sans-serif);
-  font-weight: 700;
-  font-size: 2.1rem;
-  color: var(--accent-green);
-  margin-bottom: 36px;
-  letter-spacing: 0.02em;
-}
-
-details {
-  background: color-mix(in srgb, var(--accent-color, #12a16b), #fff 92%);
-  border-radius: 18px;
-  margin-bottom: 23px;
-  box-shadow: 0 2px 20px 0 rgba(18, 161, 107, 0.08);
-  padding: 0;
-  transition: box-shadow 0.24s;
-  border: 1.5px solid color-mix(in srgb, var(--accent-color, #12a16b), #fff 95%);
-  overflow: hidden;
-  font-family: var(--body-font, "Inter", sans-serif);
-}
-
-details[open] {
-  box-shadow: 0 8px 32px 0 rgba(12,100,66,0.09);
-  border-color: var(--accent-color, #12a16b);
-}
-
-details summary {
-  font-family: var(--heading-font, "Barlow", sans-serif);
-  color: var(--heading-color, #0a3223);
-  font-weight: 700;
-  font-size: 1.18rem;
-  padding: 22px 32px;
-  background: transparent;
-  cursor: pointer;
-  outline: none;
-  transition: background 0.17s, color 0.18s;
-  position: relative;
-  user-select: none;
-}
-details summary::-webkit-details-marker { display: none; }
-details summary:after {
-  content: "\f282";
-  font-family: "Bootstrap-icons";
-  float: right;
-  font-size: 1.4em;
-  color: var(--accent-color, #12a16b);
-  font-weight: normal;
-  transition: transform 0.28s;
-  transform: rotate(0deg);
-}
-
-details[open] summary:after {
-  transform: rotate(90deg);
-}
-
-.faq_answer {
-  color: color-mix(in srgb, var(--default-color, #14201c) 88%, #7ad28d 1%);
-  background: transparent;
-  padding: 0 32px 22px 32px;
-  font-size: 1.09rem;
-  font-weight: 400;
-  line-height: 1.7;
-  font-family: var(--body-font, "Inter", sans-serif);
-}
-
-details b {
-  color: var(--accent-color, #12a16b); 
-  font-weight: 600; 
-  letter-spacing: 0.02em;
-}
-
-details a {
-  color: var(--accent-color, #12a16b);
-  text-decoration: underline;
-}
-
-/* Responsive: Stack/soften padding */
-@media (max-width: 768px) {
-  .section { padding: 40px 0 24px 0; }
-  details summary, .faq_answer { padding-left: 16px; padding-right: 16px; }
-  .section-title h2 { font-size: 1.42rem; margin-bottom: 26px; }
-}
-
-/* Match your footer/header colors if needed.
-You may comment out if satisfied with your main.css for these. */
-/*
-.footer { background: var(--background-color, #f4f9f7); }
-.header { background: rgba(0,0,0,0); }
-*/
-
-/* Optionally: Add a slight hover effect for summaries */
-details:not([open]) summary:hover {
-  background: color-mix(in srgb, var(--accent-color, #12a16b), #fff 96%);
-  color: var(--accent-color, #12a16b);
-}
-</style>
-
-  </style>
+  <link rel="stylesheet" href="assets/css/faq.css">
 </head>
 
 <body class="index-page">
 
-  <!-- Header (Copied from index.html) -->
   <header id="header" class="header fixed-top">
-    <div class="branding d-flex align-items-center">
+
+   
+    
+
+    <div class="branding d-flex align-items-cente">
+
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
           <h1 class="sitename">NAZARIO</h1>
         </a>
+
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html#hero">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li><a href="index.html#team">Team</a></li>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
             <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#">Dropdown 1</a></li>
@@ -190,17 +51,28 @@ details:not([open]) summary:hover {
                   <ul>
                     <li><a href="#">Deep Dropdown 1</a></li>
                     <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
               </ul>
             </li>
-            <li><a href="index.html#contact">Contact</a></li>
+
+            
+            <li><a href="#contact">Contact</a></li>
+
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
+
       </div>
+
     </div>
+
   </header>
 
   <main class="main" style="padding-top: 100px;">
