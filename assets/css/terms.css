@@ -1,3 +1,5 @@
+
+
 :root {
       --background-dark: #111916;
       --background-overlay: rgba(21,33,29,0.77);
@@ -21,36 +23,19 @@
       letter-spacing: 0.01em;
     }
 
-.main {
-width: 90%; 
-margin-left: auto;
-margin-right: auto;
-padding-top: 100px;
-min-height: 80vh;
-}
-
     /* --- Main Wide Policy Block --- */
     .main-policy {
-background: #fff;
-border-radius: var(--border-radius);
-box-shadow: 0 4px 32px 0 rgba(16, 51, 43, 0.09);
-padding: clamp(16px, 3vw, 32px); 
-margin-top: 24px; 
-margin-bottom: 60px;
-width: 100%;
-max-width: 900px; 
-margin-left: auto;
-margin-right: auto;
-}
-    a {
-text-decoration: none;
-color: inherit; /* optional: inherit text color */
-}
-
-.policy-container {
-padding-left: clamp(12px, 3vw, 24px);
-padding-right: clamp(12px, 3vw, 24px);
-}
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 32px 0 rgba(16, 51, 43, 0.09);
+    padding: 40px 30px 40px 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    max-width: 900px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    }
 
     .main-policy .policy-container {
       max-width: 960px;
@@ -95,3 +80,8 @@ padding-right: clamp(12px, 3vw, 24px);
       .main-policy { padding: 16px 0; }
       .main-policy h1 { font-size: 2rem;}
     }
+
+    a {
+text-decoration: none;
+
+}
