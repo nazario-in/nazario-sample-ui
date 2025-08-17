@@ -17,175 +17,62 @@
 
   <link rel="stylesheet" href="assets/css/main.css">
   <!-- Custom CSS -->
-  <!-- <link rel="stylesheet" href="assets/css/shop.css"> -->
-   <style>
-    /* Main content */
-/* Updated spacing for main.page-content with black and green grid */
-/* Fonts */
-:root {
-  /* Colors and brand palette, sampled from your screenshot */
-  --background-dark: #111916;
-  --background-overlay: rgba(21,33,29,0.77);
-  --accent-green: #18d985;
-  --pale-green: #7bfbb2;
-  --footer-dark: #161d1a;
-  --card-bg: rgba(32,43,39,0.97);
-
-  --text-main: #fff;
-  --text-muted: #c1e7d2;
-  --text-dark: #12a16b;
-
-  --border-radius: 16px;
-  --shadow: 0 4px 24px 0 rgba(0,0,0,0.14);
-
-  --heading-font: 'Barlow', sans-serif;
-  --body-font: 'Inter', sans-serif;
-}
-
-body {
-  background: var(--background-dark);
-  color: var(--text-main);
-  font-family: var(--body-font);
-  margin: 0;
-  min-height: 100vh;
-  letter-spacing: 0.04em;
-}
-
-/* SHOP PAGE MAIN CONTENT */
-.page-content {
-  margin: 0 auto;
-  padding: 48px 0 48px 0;
-  min-height: 80vh;
-  background: var(--background-overlay);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* PRODUCT GRID & CARD STYLING - As on the homepage info blocks */
-.content-container {
-  width: 100%;
-  max-width: 1350px;
-  padding: 0 28px;
-}
-
-.products-grid {
-  margin-top: 80px;
-  background: #fff;
-  border-radius: var(--border-radius);
-  padding: 36px 24px 32px 24px;
-  box-shadow: var(--shadow);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 32px;
-}
-
-.product-card {
-  background: rgba(58, 34, 34, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  border-radius: var(--border-radius);
-  box-shadow: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.22s, transform 0.22s;
-  padding: 32px 22px 24px 22px;
-  border: 1.5px solid rgba(64,160,90,0.05);
-}
-
-.product-card:hover {
-  box-shadow:  0 4px 24px 0 rgba(22, 217, 133, 0.07);
-  transform: translateY(-4px) scale(1.02);
-}
-
-.product-image {
-  width: 120px;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: 12px;
-  background: #102e1a;
-  margin-bottom: 18px;
-  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.07);
-}
-.product-name {
-  font-family: var(--heading-font);
-  font-size: 1.17rem;
-  font-weight: 700;
-  color: var(--accent-green);
-  margin-bottom: 4px;
-  letter-spacing: 0.03em;
-}
-.product-info-text {
-  color: #4b6358;
-  font-size: 1.08rem;
-  margin-bottom: 10px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-}
-.buy-now-btn {
-  font-family: var(--heading-font);
-  background: var(--accent-green);
-  color: #07180f;
-  font-size: 1.08rem;
-  font-weight: 800;
-  border: none;
-  border-radius: 30px;
-  padding: 10px 28px;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: background 0.22s, color 0.22s;
-  box-shadow: 0 2px 14px 0 rgba(12,255,161,0.10);
-}
-.buy-now-btn:hover, .buy-now-btn:focus {
-  background: #1bee98;
-  color: #02582d;
-  outline: none;
-}
-
-/* Responsive tweaks to grid */
-@media (max-width: 900px) {
-  .products-grid {
-    padding: 22px 6px 20px 6px;
-    gap: 22px;
-  }
-  .product-card { padding: 24px 8px 18px 8px; }
-}
-@media (max-width: 600px) {
-  .content-container { padding: 0 4px; }
-  .products-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-}
-@media (max-width: 400px) {
-  .products-grid { grid-template-columns: 1fr; }
-}   </style>
+  <link rel="stylesheet" href="assets/css/shop.css">
 
 </head>
 <body class="index-page">
 
   <header id="header" class="header fixed-top">
-    <div class="branding d-flex align-items-center">
-      <div class="container d-flex justify-content-between align-items-center">
+
+   
+    
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
           <h1 class="sitename">NAZARIO</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="#teams">Teams</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+
+            
+            <li><a href="contact.html">Contact</a></li>
+
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
+
       </div>
+
     </div>
-</header>
 
-
-  <main class="page-content">
+  </header>
+  <main class="page-content" id="shop">
         <div class="content-container">
         <section class="products-grid" aria-label="Product list">
             <!-- Repeat this product card for all products -->
@@ -199,7 +86,7 @@ body {
               />
               <p class="product-name">Classic Aviator Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button"  onclick="location.href='product.html'">Buy Now</button>
 
             </article>
 
@@ -213,7 +100,7 @@ body {
               />
               <p class="product-name">Retro Square Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -226,7 +113,7 @@ body {
               />
               <p class="product-name">Sporty Wrap-Around Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -239,7 +126,7 @@ body {
               />
               <p class="product-name">Elegant Cat-Eye Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -252,7 +139,7 @@ body {
               />
               <p class="product-name">Modern Geometric Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -265,7 +152,7 @@ body {
               />
               <p class="product-name">Minimalist Round Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -278,7 +165,7 @@ body {
               />
               <p class="product-name">Bold Oversized Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -291,7 +178,7 @@ body {
               />
               <p class="product-name">Vintage Browline Sunglasses</p>
               <p class="product-price">$120</p>
-              <button class="buy-now-btn" type="button">Buy Now</button>
+              <button class="buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -304,7 +191,7 @@ body {
               />
               <p class="product-name">Futuristic Shield Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -317,7 +204,7 @@ body {
               />
               <p class="product-name">Eco-Friendly Bamboo Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -330,7 +217,7 @@ body {
               />
               <p class="product-name">Luxury Gold-Rimmed Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
 
             <article class="product-card" tabindex="0">
@@ -343,7 +230,7 @@ body {
               />
               <p class="product-name">Colorful Mirrored Sunglasses</p>
               <p class="product-info-text">$120</p>
-              <button class="product-info-text buy-now-btn" type="button">Buy Now</button>
+              <button class="product-info-text buy-now-btn" type="button" onclick="location.href='product.html'">Buy Now</button>
             </article>
           </section>
         </div>
@@ -367,13 +254,13 @@ body {
           </div>
         </div>
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Quick Links</h4>
+        <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="terms.html">Terms of service</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-6 footer-links">
