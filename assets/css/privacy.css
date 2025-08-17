@@ -1,0 +1,94 @@
+:root {
+      --background-dark: #111916;
+      --background-overlay: rgba(21,33,29,0.77);
+      --accent-green: #18d985;
+      --pale-green: #7bfbb2;
+      --footer-dark: #161d1a;
+      --card-bg: rgba(32,43,39,0.97);
+
+      --text-main: #fff;
+      --text-muted: #c1e7d2;
+      --text-dark: #14201c;
+      --heading-font: 'Barlow', sans-serif;
+      --body-font: 'Inter', sans-serif;
+      --border-radius: 16px;
+      --shadow: 0 4px 24px 0 rgba(0,0,0,0.14);
+    }
+    body {
+      font-family: var(--body-font, 'Inter', sans-serif);
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+      letter-spacing: 0.01em;
+    }
+a {
+text-decoration: none;
+color: inherit; /* optional: inherit text color */
+}
+
+
+.main {
+width: 98%;
+margin-left: auto;
+margin-right: auto;
+padding-top: 80px; /* ensures content clears the fixed header */
+min-height: 80vh;
+}
+
+main .container {
+max-width: none;
+width: 100%;
+padding-left: clamp(16px, 4vw, 32px);
+padding-right: clamp(16px, 4vw, 32px);
+}
+    
+.main-policy {
+background: #fff;
+border-radius: var(--border-radius);
+box-shadow: 0 4px 32px 0 rgba(16, 51, 43, 0.07);
+padding: clamp(16px, 3vw, 32px);
+margin-top: 24px; /* comfortable breathing space below the header area */
+margin-bottom: 60px;
+width: 100%;
+}
+
+    .main-policy h1 {
+      font-family: var(--heading-font, 'Barlow', sans-serif);
+      font-weight: 800;
+      color: var(--background-dark);
+      letter-spacing: 0.01em;
+      font-size: 2.6rem;
+      margin-bottom: 18px;
+    }
+    .main-policy h2 {
+      font-family: var(--heading-font, 'Barlow', sans-serif);
+      color: var(--accent-green);
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-top: 36px;
+      margin-bottom: 12px;
+    }
+    .main-policy p, .main-policy ul {
+      color: #4b6358;
+      font-size: 1.07rem;
+      line-height: 1.76;
+      margin-bottom: 1.1rem;
+    }
+    .main-policy ul {
+      padding-left: 1.1rem;
+    }
+    .main-policy li { margin-bottom: 0.5rem; }
+    .main-policy .date {
+      color: var(--pale-green);
+      font-size: 1rem;
+      margin-bottom: 30px;
+      display: block;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-policy {
+        padding: 20px 10px;
+      }
+      .navbar-brand { font-size: 1.35rem; }
+    }
+

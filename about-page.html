@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>About Us - NAZARIO</title>
+  <!-- Google Fonts and Main CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Barlow:wght@700&display=swap" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <style>
+    :root {
+  --default-font: "Roboto", system-ui, ...;
+  --heading-font: "Barlow", sans-serif;
+  --nav-font: "Inter", sans-serif;
+  --background-color: #ffffff;
+  --background-dark: #121a16;        /* <-- add this line */
+  --default-color: #14201c;
+  --heading-color: #0a3223;
+  --accent-color: #12a16b;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+  </style>
+</head>
+<body style="background: var(--background-dark); color: var(--default-color);">
+
+  <!-- Header -->
+  <header id="header" class="header fixed-top">
+    <div class="branding d-flex align-items-center">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">NAZARIO</h1>
+        </a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <main id="main">
+    <section class="about py-5" style="margin-top:90px;">
+      <div class="container">
+        <!-- Title -->
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>Discover the story, mission, and people behind NAZARIO, where style meets clarity.</p>
+        </div>
+        <!-- Our Story -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 mx-auto">
+            <div class="card shadow about-card p-4">
+              <h3 class="mb-3" style="color:var(--heading-color);">Our Story</h3>
+              <p class="mb-0" style="color:var(--default-color); font-size:1.1rem; line-height:1.75;">
+                NAZARIO was born from a passion for design and frustration with overpriced eyewear. We set out to build a brand that blends affordability, fashion, and functionality into every frame. Our journey began with the belief that everyone deserves stylish vision.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Our Journey Timeline -->
+        <div class="mb-5">
+          <h3 class="text-center mb-4" style="color:var(--heading-color);">Our Journey</h3>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-3">
+              <div class="card p-3 shadow h-100 text-center">
+                <div class="mb-2">
+                  <span class="badge rounded-pill bg-success fs-5">2020</span>
+                </div>
+                <h5 class="fw-bold" style="color:var(--heading-color);">Founded</h5>
+                <p class="small" style="color:var(--default-color);">We started with a mission to make fashionable eyewear affordable for everyone.</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card p-3 shadow h-100 text-center">
+                <div class="mb-2">
+                  <span class="badge rounded-pill bg-success fs-5">2021</span>
+                </div>
+                <h5 class="fw-bold" style="color:var(--heading-color);">First Launch</h5>
+                <p class="small" style="color:var(--default-color);">Released our first eyewear line, blending quality with trendsetting design.</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card p-3 shadow h-100 text-center">
+                <div class="mb-2">
+                  <span class="badge rounded-pill bg-success fs-5">2022</span>
+                </div>
+                <h5 class="fw-bold" style="color:var(--heading-color);">Global Reach</h5>
+                <p class="small" style="color:var(--default-color);">Expanded globally through our online platform, reaching thousands.</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card p-3 shadow h-100 text-center">
+                <div class="mb-2">
+                  <span class="badge rounded-pill bg-success fs-5">2023</span>
+                </div>
+                <h5 class="fw-bold" style="color:var(--heading-color);">Innovation</h5>
+                <p class="small" style="color:var(--default-color);">Introduced sustainable materials and virtual try-on technology.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meet the Team -->
+        <div class="mb-5">
+          <h3 class="text-center mb-4" style="color:var(--heading-color);">Meet the Team</h3>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-3">
+              <div class="card shadow text-center p-4 h-100">
+                <img src="assets/img/person/person-m-9.webp"  class="rounded-circle mx-auto mb-3" width="120" height="120" style="border: 4px solid var(--accent-color);" />
+                <h5 class="fw-bold mb-1" style="color:var(--heading-color);">Riddhish Joshi</h5>
+                <div class="small text-muted mb-2">Founder & CEO</div>
+                <blockquote class="fst-italic small" style="color:var(--accent-color);">"NAZARIO is more than just a brand; it's a passion project to make great vision and great style accessible to everyone."</blockquote>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card shadow text-center p-4 h-100">
+                <img src="assets/img/person/person-m-3.webp"class="rounded-circle mx-auto mb-3" width="120" height="120" style="border: 4px solid var(--accent-color);" />
+                <h5 class="fw-bold mb-1" style="color:var(--heading-color);">Raj Patil</h5>
+                <div class="small text-muted mb-2">Lead Designer</div>
+                <blockquote class="fst-italic small" style="color:var(--accent-color);">"Designing eyewear is about combining vision with elegance. I aim to create frames that reflect individual identity."</blockquote>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card shadow text-center p-4 h-100">
+                <img src="assets/img/person/person-f-12.webp "class="rounded-circle mx-auto mb-3" width="120" height="120" style="border: 4px solid var(--accent-color);" />
+                <h5 class="fw-bold mb-1" style="color:var(--heading-color);">Ruchi Jasmatiya</h5>
+                <div class="small text-muted mb-2">Head of Operations</div>
+                <blockquote class="fst-italic small" style="color:var(--accent-color);">"Efficiency, precision, and care — that's how we deliver excellence in every NAZARIO experience."</blockquote>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card shadow text-center p-4 h-100">
+                <img src="assets/img/person/person-m-8.webp" class="rounded-circle mx-auto mb-3" width="120" height="120" style="border: 4px solid var(--accent-color);" />
+                <h5 class="fw-bold mb-1" style="color:var(--heading-color);">Dev Sharma</h5>
+                <div class="small text-muted mb-2">Marketing Lead</div>
+                <blockquote class="fst-italic small" style="color:var(--accent-color);">"Building a brand is building trust. My mission is to share our story in a way that truly connects."</blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div>
+          <h3 class="text-center mb-4" style="color:var(--heading-color);">Our Vision &amp; Mission</h3>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card p-4 h-100 shadow border-start border-4" style="border-color: var(--accent-color) !important;">
+                <h4 class="fw-bold mb-3" style="color:var(--heading-color);">Our Vision</h4>
+                <p style="color:var(--default-color);">To revolutionize the eyewear industry by making high-quality, stylish, and sustainable glasses available to all. We envision a world where self-expression and visual clarity go hand in hand.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card p-4 h-100 shadow border-start border-4" style="border-color: var(--accent-color) !important;">
+                <h4 class="fw-bold mb-3" style="color:var(--heading-color);">Our Mission</h4>
+                <p style="color:var(--default-color);">Our mission is to deliver exceptional eyewear that merges fashion with function, while fostering a customer-first experience built on trust, innovation, and transparency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Nazario</span>
+          </a>
+          <p>Redefining vision with tech. Nazario SSO makes sign-in seamless, secure, and smart — because your users deserve better.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Eyewear Collection</h4>
+          <ul>
+            <li><a href="#">Blue Light Glasses</a></li>
+            <li><a href="#">Sunglasses</a></li>
+            <li><a href="#">Prescription Eyewear</a></li>
+            <li><a href="#">Reading Glasses</a></li>
+            <li><a href="#">Kids & Teens</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Get in Touch</h4>
+          <p>Baner, Pune</p>
+          <p>Maharashtra, IN 411045</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+91 74477 06777</span></p>
+          <p><strong>Email:</strong> <span>support@nazario.tech</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2025</span> <strong class="px-1 sitename">Nazario</strong> <span>All rights reserved</span></p>
+      <div class="credits">
+        Built with ❤️ by the <a href="#">Inovite Team</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
